@@ -1,6 +1,20 @@
+/* Global Styles */
 * {
   list-style-type: none;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Ensures full height for body and html */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the root element spans the full viewport height */
 }
 
 .footer_outer_container {
@@ -9,7 +23,8 @@
   display: flex;
   justify-content: center;
   padding: 20px;
-  margin: 0;
+  margin-top: auto; /* Pushes the footer to the bottom */
+  width: 100%;
 }
 
 .footer_inner_container {

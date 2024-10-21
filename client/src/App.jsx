@@ -53,9 +53,11 @@ function App() {
   }
   useEffect(() => {
     if (token) {
+      console.log("Token exists, calling checkUser...");
+
       checkUser();
     }
-  });
+  },[token]);
   // console.log(user)
   return (
     <AppState.Provider value={{ user, setUser, handleLogout }}>
@@ -63,7 +65,7 @@ function App() {
         <Route path="/" element={<LayOut />}>
        
           <Route path="/" element={
-             <ProtectedRoute>
+             <ProtectedRoute msg="Welcome to Evangadi Forum" redirect = "/">
               <HomePage />
               </ProtectedRoute>} />
           
